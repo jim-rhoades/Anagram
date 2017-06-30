@@ -20,6 +20,6 @@ During a job interview I was given a "whiteboard" code challenge with this probl
 Some ideas came from various members of the [iOS Developers Slack group](https://ios-developers.io).
 
 ### Key take-aways
-- version 2 (`isAnagramV2`) is the fastest, though it might not be the answer an interviewer is looking for during a whiteboard job interview
-- originally I had written this in a Playground, but performance testing in a Playground is generally not a good idea... testing the compiled code via command line tool provides more accurate results
-- performance differences between a debug build and release build can be dramatic... on my computer, `isAnagramV2` takes 10s for the debug build, and less than 1s for the release build 
+- Version 2 (`isAnagramV2`) is the fastest, though it might not be the answer an interviewer is looking for during a whiteboard job interview.
+- Originally I had written this in a Playground, but performance testing in a Playground is generally not a good idea. Testing the compiled code via this command line tool provides more accurate results.
+- Performance differences between the debug build and release build can be dramatic. On my computer, `isAnagramV2` takes 10s when running the debug build, and less than 1s for the release build.
