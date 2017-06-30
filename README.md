@@ -15,7 +15,7 @@ Unit tests are also included to ensure that each version of `isAnagram` works as
 - ignore spaces (given the strings "Mia" and "I am", the function should return true)
 
 ### Why?
-During a job interview I was given a "whiteboard" code challenge with this problem. After the interview I was curious and wanted to find a quick way of solving it with large strings.
+During a job interview I was given a "whiteboard" code challenge with this problem. After the interview I was curious and wanted to find a way to solve it that performed well with large strings.
 
 Some ideas came from various members of the [iOS Developers Slack group](https://ios-developers.io).
 
