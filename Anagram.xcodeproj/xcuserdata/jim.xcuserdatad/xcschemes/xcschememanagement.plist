@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>AnagramTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>38A080EF1F06712500E801CC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>38F87C371F0563D50039D5CA</key>
 		<dict>
 			<key>primary</key>
