@@ -58,45 +58,9 @@ func isAnagramV2b(string1: String, string2: String) -> Bool {
 
 
 // VERSION 3
-func isAnagramV3(string1: String, string2: String) -> Bool {
-	
-	var dict = [Character: Int]()
-	
-	for char in string1.lowercased().characters {
-		if char == " " { continue }
-		
-		if let value = dict[char] {
-			dict[char] = value + 1
-		} else {
-			dict[char] = 1
-		}
-	}
-	
-	for char in string2.lowercased().characters {
-		if char == " " { continue }
-		
-		if let value = dict[char] {
-			dict[char] = value - 1
-		} else {
-			// there's a character in string2 that wasn't in string1
-			return false
-		}
-	}
-	
-	for pair in dict {
-		if pair.value != 0 {
-			return false
-		}
-	}
-	
-	return true
-}
-
-
-// VERSION 4
 // idea to use NSCountedSet from: https://stackoverflow.com/a/40400649/234609
 
-func isAnagramV4(string1: String, string2: String) -> Bool {
+func isAnagramV3(string1: String, string2: String) -> Bool {
 	let s1 = string1.replacingOccurrences(of: " ", with: "").lowercased()
 	let s2 = string2.replacingOccurrences(of: " ", with: "").lowercased()
 	
@@ -109,7 +73,7 @@ func isAnagramV4(string1: String, string2: String) -> Bool {
 // similar to the above, but using a closure
 // performance is basically the same
 /*
-func isAnagramV4b(string1: String, string2: String) -> Bool {
+func isAnagramV3b(string1: String, string2: String) -> Bool {
 	
 	let transform: ((String) -> NSCountedSet) = {
 		let s = $0.replacingOccurrences(of: " ", with: "").lowercased()
@@ -121,8 +85,8 @@ func isAnagramV4b(string1: String, string2: String) -> Bool {
 */
 
 
-// VERSION 5
-func isAnagramV5(string1: String, string2: String) -> Bool {
+// VERSION 4
+func isAnagramV4(string1: String, string2: String) -> Bool {
 	var s1Dict = [Character: Int]()
 	var s2Dict = [Character: Int]()
 	
@@ -138,8 +102,8 @@ func isAnagramV5(string1: String, string2: String) -> Bool {
 }
 
 
-// VERSION 6
-func isAnagramV6(string1: String, string2: String) -> Bool {
+// VERSION 5
+func isAnagramV5(string1: String, string2: String) -> Bool {
 	var letters: [Character: Int] = [:]
 	
 	for letter in string1.lowercased().characters where letter != " " {
@@ -196,12 +160,6 @@ printTimeElapsedWhenRunningCode(title: "VERSION 4") {
 
 printTimeElapsedWhenRunningCode(title: "VERSION 5") {
 	if !isAnagramV5(string1: string1, string2: string2) {
-		print("not an anagram?")
-	}
-}
-
-printTimeElapsedWhenRunningCode(title: "VERSION 6") {
-	if !isAnagramV6(string1: string1, string2: string2) {
 		print("not an anagram?")
 	}
 }
